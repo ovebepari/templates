@@ -13,7 +13,7 @@ class Graph:
     """ The Graph class
 
     The base ADT that will be used to create new Graph
-    objects. Editing not advised, unless felt wrong.
+    objects. Editing not advised.
 
     """
 
@@ -26,6 +26,12 @@ class Graph:
         self.graph[u].append(v)
 
     def addEdge_file(self, path):
+        """Takes input from file.
+
+        Path is provided by the method argument.
+        Input should be provided as Adjacency List.
+
+        """
         with open(path, 'r') as File:
             for line in File.readlines():
                 ints = list(map(int, line.strip().split())) 
